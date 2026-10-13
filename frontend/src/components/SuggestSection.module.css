@@ -1,0 +1,298 @@
+.wrap { padding: 0 24px; }
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.sub {
+  color: var(--text-2);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.panel {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+}
+
+.tabContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tabHint {
+  font-size: 0.84rem;
+  color: var(--text-3);
+  line-height: 1.6;
+}
+
+/* Mood chips */
+.moodGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.moodChip {
+  font-size: 0.85rem;
+  padding: 8px 14px;
+}
+
+/* Song search */
+.searchRow {
+  display: flex;
+  gap: 10px;
+}
+
+.pickedWrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.pickedLabel {
+  font-size: 0.78rem;
+  color: var(--text-3);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.pickedList { display: flex; flex-wrap: wrap; gap: 6px; }
+.pickedChip { cursor: pointer; font-size: 0.78rem; }
+
+.searchResults {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 280px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4px;
+}
+
+.searchRow2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background var(--t-fast);
+}
+.searchRow2:hover { background: var(--surface2); }
+.searchRowActive { background: rgba(42,120,214,0.08) !important; }
+
+.srTitle { font-size: 0.875rem; font-weight: 500; color: var(--text); }
+.srSub { font-size: 0.75rem; color: var(--text-3); margin-top: 1px; }
+.checkmark { margin-left: auto; color: var(--accent); font-weight: 700; font-size: 1rem; }
+
+/* Sliders */
+.sliderGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sliderRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sliderLabel {
+  font-size: 0.72rem;
+  color: var(--text-3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sliderInner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sliderVal {
+  font-size: 0.8rem;
+  color: var(--text-2);
+  min-width: 42px;
+  text-align: right;
+}
+
+/* ── Results panel ────────────────────────────────────────────────── */
+.resultsWrap {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.results { display: flex; flex-direction: column; }
+
+.resultsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.resultsCount {
+  font-size: 0.78rem;
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+.controls2 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.diversityWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--text-3);
+}
+
+.diversityLabel {
+  white-space: nowrap;
+  font-size: 0.75rem;
+}
+
+.rowList {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--t-fast);
+}
+.row:last-child { border-bottom: none; }
+.row:hover { background: var(--surface2); }
+
+.rowLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.rowDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.rowInfo { min-width: 0; }
+
+.rowTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rowArtist {
+  font-size: 0.78rem;
+  color: var(--text-2);
+  margin-top: 2px;
+}
+
+.rowGenre {
+  color: var(--text-3);
+}
+
+.rowWhy {
+  font-size: 0.72rem;
+  color: var(--text-3);
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.rowRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.matchWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.matchPct {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1;
+}
+
+.matchLabel {
+  font-size: 0.65rem;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.morBtn {
+  font-size: 0.75rem !important;
+  padding: 5px 10px !important;
+}

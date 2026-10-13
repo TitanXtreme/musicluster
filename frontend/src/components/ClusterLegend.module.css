@@ -1,0 +1,46 @@
+.sectionTitle {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--c-border, var(--border));
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px var(--c-glow, transparent);
+}
+
+.emoji {
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.desc {
+  font-size: 0.79rem;
+  color: var(--muted);
+  line-height: 1.55;
+}

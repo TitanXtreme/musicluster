@@ -1,0 +1,7 @@
+{
+  "n_clusters": 3,
+  "init": "k-means++",
+  "n_init": 20,
+  "max_iter": 300,
+  "random_state": 42
+}
